@@ -56,6 +56,8 @@ body {
 a { color: var(--vela); text-decoration: none; border-bottom: 1px solid rgba(232, 168, 76, 0.35); transition: color .2s, border-color .2s; }
 a:hover, a:focus-visible { color: var(--vela-viva); border-color: var(--vela-viva); }
 a:focus-visible, button:focus-visible { outline: 1px solid var(--vela); outline-offset: 3px; }
+/* Direcciones largas (enlaces de Google en la beta): se parten antes que salirse. */
+article a { overflow-wrap: anywhere; }
 
 .saltar { position: absolute; left: -999px; top: 0; }
 .saltar:focus { left: 1rem; top: 1rem; z-index: 10; background: var(--madera-clara); padding: .5rem 1rem; }
