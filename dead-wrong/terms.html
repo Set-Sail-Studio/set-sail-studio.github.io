@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Dead Wrong · Set Sail Studio</title>
+<link rel="alternate" hreflang="es" href="es/terms.html">
+<link rel="alternate" hreflang="en" href="en/terms.html">
+<link rel="alternate" hreflang="fr" href="fr/terms.html">
+<link rel="alternate" hreflang="de" href="de/terms.html">
+<link rel="alternate" hreflang="ru" href="ru/terms.html">
+<link rel="icon" href="icono.png">
+<link rel="stylesheet" href="estilo.css">
+<script>
+(function () {
+  var disp = ["es","en","fr","de","ru"];
+  var pref = (navigator.languages || [navigator.language || 'en']);
+  for (var i = 0; i < pref.length; i++) {
+    var l = String(pref[i]).slice(0, 2).toLowerCase();
+    if (disp.indexOf(l) >= 0) { location.replace(l + '/terms.html' + location.hash); return; }
+  }
+  location.replace('en/terms.html' + location.hash);
+})();
+</script>
+</head>
+<body>
+<main class="portada">
+<img class="icono" src="icono.png" alt="" width="112" height="112">
+<h1>Dead Wrong</h1>
+<hr class="filete">
+<div class="botones">
+<a class="boton" href="es/terms.html" hreflang="es">Español</a>
+<a class="boton" href="en/terms.html" hreflang="en">English</a>
+<a class="boton" href="fr/terms.html" hreflang="fr">Français</a>
+<a class="boton" href="de/terms.html" hreflang="de">Deutsch</a>
+<a class="boton" href="ru/terms.html" hreflang="ru">Русский</a>
+</div>
+</main>
+</body>
+</html>

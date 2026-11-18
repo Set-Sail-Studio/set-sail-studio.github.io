@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080A0A">
+<meta name="description" content="Jeden Tag eine Gruselgeschichte. Jede Entscheidung kann dich töten.">
+<title>Dead Wrong · Set Sail Studio</title>
+<link rel="icon" href="../icono.png">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<a class="saltar" href="#texto">Zum Text</a>
+
+<header class="barra">
+  <a class="marca" href="../de/index.html"><img src="../icono.png" alt="" width="30" height="30"><span>Dead Wrong</span></a>
+  <nav class="idiomas" aria-label="Idioma / Language"><a href="../es/index.html" lang="es" hreflang="es" title="Español">es</a><a href="../en/index.html" lang="en" hreflang="en" title="English">en</a><a href="../fr/index.html" lang="fr" hreflang="fr" title="Français">fr</a><b lang="de" title="Deutsch">de</b><a href="../ru/index.html" lang="ru" hreflang="ru" title="Русский">ru</a></nav>
+</header>
+<main class="portada">
+<img class="icono" src="../icono.png" alt="" width="112" height="112">
+<h1>Dead Wrong</h1>
+<hr class="filete">
+<p class="lema">Jeden Tag eine Gruselgeschichte. Jede Entscheidung kann dich töten.</p>
+<div class="botones">
+  <a class="boton" href="../de/privacy.html">Datenschutz</a>
+  <a class="boton" href="../de/terms.html">Nutzungsbedingungen</a>
+</div>
+</main>
+<footer class="pie">
+  <nav><b>Start</b><a href="../de/privacy.html">Datenschutz</a><a href="../de/terms.html">Nutzungsbedingungen</a></nav>
+  <p>Kontakt: <a href="mailto:setsailstudio.deadwrong@gmail.com">setsailstudio.deadwrong@gmail.com</a></p>
+  <p class="estudio">Ein Spiel von Set Sail Studio</p>
+</footer>
+<script>
+// Marca en el índice la sección que se está leyendo.
+(function () {
+  var enlaces = document.querySelectorAll('.indice a');
+  if (!enlaces.length || !('IntersectionObserver' in window)) return;
+  var mapa = {};
+  enlaces.forEach(function (a) { mapa[a.getAttribute('href').slice(1)] = a; });
+  var obs = new IntersectionObserver(function (vistas) {
+    vistas.forEach(function (v) {
+      if (!v.isIntersecting) return;
+      enlaces.forEach(function (a) { a.classList.remove('aqui'); });
+      var a = mapa[v.target.id];
+      if (a) a.classList.add('aqui');
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  document.querySelectorAll('article section[id]').forEach(function (s) { obs.observe(s); });
+  if (window.matchMedia('(min-width: 70rem)').matches) {
+    var d = document.querySelector('.indice details');
+    if (d) d.open = true;
+  }
+})();
+</script>
+</body>
+</html>

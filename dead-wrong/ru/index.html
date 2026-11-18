@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080A0A">
+<meta name="description" content="Одна страшная история в день. Любое решение может стоить жизни.">
+<title>Dead Wrong · Set Sail Studio</title>
+<link rel="icon" href="../icono.png">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<a class="saltar" href="#texto">К тексту</a>
+
+<header class="barra">
+  <a class="marca" href="../ru/index.html"><img src="../icono.png" alt="" width="30" height="30"><span>Dead Wrong</span></a>
+  <nav class="idiomas" aria-label="Idioma / Language"><a href="../es/index.html" lang="es" hreflang="es" title="Español">es</a><a href="../en/index.html" lang="en" hreflang="en" title="English">en</a><a href="../fr/index.html" lang="fr" hreflang="fr" title="Français">fr</a><a href="../de/index.html" lang="de" hreflang="de" title="Deutsch">de</a><b lang="ru" title="Русский">ru</b></nav>
+</header>
+<main class="portada">
+<img class="icono" src="../icono.png" alt="" width="112" height="112">
+<h1>Dead Wrong</h1>
+<hr class="filete">
+<p class="lema">Одна страшная история в день. Любое решение может стоить жизни.</p>
+<div class="botones">
+  <a class="boton" href="../ru/privacy.html">Конфиденциальность</a>
+  <a class="boton" href="../ru/terms.html">Условия</a>
+</div>
+</main>
+<footer class="pie">
+  <nav><b>Главная</b><a href="../ru/privacy.html">Конфиденциальность</a><a href="../ru/terms.html">Условия</a></nav>
+  <p>Связь: <a href="mailto:setsailstudio.deadwrong@gmail.com">setsailstudio.deadwrong@gmail.com</a></p>
+  <p class="estudio">Игра от Set Sail Studio</p>
+</footer>
+<script>
+// Marca en el índice la sección que se está leyendo.
+(function () {
+  var enlaces = document.querySelectorAll('.indice a');
+  if (!enlaces.length || !('IntersectionObserver' in window)) return;
+  var mapa = {};
+  enlaces.forEach(function (a) { mapa[a.getAttribute('href').slice(1)] = a; });
+  var obs = new IntersectionObserver(function (vistas) {
+    vistas.forEach(function (v) {
+      if (!v.isIntersecting) return;
+      enlaces.forEach(function (a) { a.classList.remove('aqui'); });
+      var a = mapa[v.target.id];
+      if (a) a.classList.add('aqui');
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  document.querySelectorAll('article section[id]').forEach(function (s) { obs.observe(s); });
+  if (window.matchMedia('(min-width: 70rem)').matches) {
+    var d = document.querySelector('.indice details');
+    if (d) d.open = true;
+  }
+})();
+</script>
+</body>
+</html>
