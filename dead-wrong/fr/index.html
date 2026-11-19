@@ -1,60 +1,7 @@
 <!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#080A0A">
-<meta name="description" content="Une histoire d’horreur par jour. Chaque choix peut vous tuer.">
-<title>Dead Wrong · Set Sail Studio</title>
-<link rel="icon" href="../icono.png">
-<link rel="stylesheet" href="../estilo.css">
-</head>
-<body>
-<a class="saltar" href="#texto">Aller au texte</a>
-
-
-<header class="barra">
-  <a class="marca" href="../fr/index.html"><img src="../icono.png" alt="" width="30" height="30"><span>Dead Wrong</span></a>
-  <nav class="idiomas" aria-label="Idioma / Language"><a href="../es/index.html" lang="es" hreflang="es" title="Español">es</a><a href="../en/index.html" lang="en" hreflang="en" title="English">en</a><b lang="fr" title="Français">fr</b><a href="../de/index.html" lang="de" hreflang="de" title="Deutsch">de</a><a href="../ru/index.html" lang="ru" hreflang="ru" title="Русский">ru</a></nav>
-</header>
-<main class="portada">
-<img class="icono" src="../icono.png" alt="" width="112" height="112">
-<h1>Dead Wrong</h1>
-<hr class="filete">
-<p class="lema">Une histoire d’horreur par jour. Chaque choix peut vous tuer.</p>
-<div class="botones">
-
-  <a class="boton" href="../fr/privacy.html">Confidentialité</a>
-  <a class="boton" href="../fr/terms.html">Conditions</a>
-</div>
-</main>
-<footer class="pie">
-  <nav><b>Accueil</b><a href="../fr/privacy.html">Confidentialité</a><a href="../fr/terms.html">Conditions</a></nav>
-  <p>Contact: <a href="mailto:setsailstudio.deadwrong@gmail.com">setsailstudio.deadwrong@gmail.com</a></p>
-  <p class="estudio">Un jeu de Set Sail Studio</p>
-</footer>
-<script>
-// Marca en el índice la sección que se está leyendo.
-(function () {
-  var enlaces = document.querySelectorAll('.indice a');
-  if (!enlaces.length || !('IntersectionObserver' in window)) return;
-  var mapa = {};
-  enlaces.forEach(function (a) { mapa[a.getAttribute('href').slice(1)] = a; });
-  var obs = new IntersectionObserver(function (vistas) {
-    vistas.forEach(function (v) {
-      if (!v.isIntersecting) return;
-      enlaces.forEach(function (a) { a.classList.remove('aqui'); });
-      var a = mapa[v.target.id];
-      if (a) a.classList.add('aqui');
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  document.querySelectorAll('article section[id]').forEach(function (s) { obs.observe(s); });
-  if (window.matchMedia('(min-width: 70rem)').matches) {
-    var d = document.querySelector('.indice details');
-    if (d) d.open = true;
-  }
-})();
-</script>
-</body>
-</html>
+<html><head><meta charset="utf-8">
+<title>The Last Tale</title>
+<link rel="canonical" href="https://set-sail-studio.github.io/the-last-tale/fr/index.html">
+<meta http-equiv="refresh" content="0; url=../../the-last-tale/fr/index.html">
+<script>location.replace("../../the-last-tale/fr/index.html" + location.hash);</script>
+</head><body><p><a href="../../the-last-tale/fr/index.html">The Last Tale</a></p></body></html>

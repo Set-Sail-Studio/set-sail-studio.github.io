@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>The Last Tale · Set Sail Studio</title>
+<link rel="alternate" hreflang="es" href="es/privacy.html">
+<link rel="alternate" hreflang="en" href="en/privacy.html">
+<link rel="alternate" hreflang="fr" href="fr/privacy.html">
+<link rel="alternate" hreflang="de" href="de/privacy.html">
+<link rel="alternate" hreflang="ru" href="ru/privacy.html">
+<link rel="icon" href="icono.png">
+<link rel="stylesheet" href="estilo.css">
+<script>
+(function () {
+  var disp = ["es","en","fr","de","ru"];
+  var pref = (navigator.languages || [navigator.language || 'en']);
+  for (var i = 0; i < pref.length; i++) {
+    var l = String(pref[i]).slice(0, 2).toLowerCase();
+    if (disp.indexOf(l) >= 0) { location.replace(l + '/privacy.html' + location.hash); return; }
+  }
+  location.replace('en/privacy.html' + location.hash);
+})();
+</script>
+</head>
+<body>
+<main class="portada">
+<img class="icono" src="icono.png" alt="" width="112" height="112">
+<h1>The Last Tale</h1>
+<hr class="filete">
+<div class="botones">
+<a class="boton" href="es/privacy.html" hreflang="es">Español</a>
+<a class="boton" href="en/privacy.html" hreflang="en">English</a>
+<a class="boton" href="fr/privacy.html" hreflang="fr">Français</a>
+<a class="boton" href="de/privacy.html" hreflang="de">Deutsch</a>
+<a class="boton" href="ru/privacy.html" hreflang="ru">Русский</a>
+</div>
+</main>
+</body>
+</html>
